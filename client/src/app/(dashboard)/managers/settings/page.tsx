@@ -9,7 +9,7 @@ import SettingsForm from '../../../../components/SettingsForm';
 
 const ManagerSettings = () => {
   const { data: authUser, isLoading } = useGetAuthUserQuery();
-  console.log('authUser: ', authUser);
+  // console.log('authUser: ', authUser);
   const [updateManager] = useUpdateManagerSettingsMutation();
 
   if (isLoading) return <>Loading...</>;

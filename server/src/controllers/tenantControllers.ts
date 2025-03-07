@@ -140,7 +140,7 @@ export const addFavoriteProperty = async (
         include: { favorites: true },
       });
 
-      res.json(updateTenant);
+      res.json(updatedTenant);
     } else {
       res.status(409).json({ message: 'Property already added as favorite' });
     }
@@ -168,7 +168,7 @@ export const removeFavoriteProperty = async (
       include: { favorites: true },
     });
 
-    res.json(updateTenant);
+    res.json(updatedTenant);
   } catch (error: any) {
     res.status(500).json({
       message: `Error removing favorite property: ${error.message}`,
